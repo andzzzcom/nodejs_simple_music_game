@@ -1,0 +1,22 @@
+{
+  "name": "tebaklagu",
+  "version": "1.0.0",
+  "description": "Game Tebak Lagu",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andreas",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "consolidate": "^0.16.0",
+    "cookie-parser": "*",
+    "dotenv": "*",
+    "express": "*",
+    "mustache": "^4.2.0",
+    "mysql": "^2.18.1",
+    "path": "^0.12.7",
+    "ejs": "*"
+  }
+}

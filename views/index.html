@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="/css/styles.css" rel="stylesheet" type="text/css">
+        <link rel="icon" href="https://image.shutterstock.com/image-vector/music-notes-curves-swirls-vector-260nw-1705493965.jpg" type="image/x-icon" />
+        <title>Games: Music Guess!</title>
+     </head>
+    <body>
+        <div class="container" style="border-radius:10px;background-size:cover;background-image:url('/images/bg_image.webp');width:50%;height: 400px;border: 1px solid gray;padding-top: 20px;margin-top:20px"> 
+            
+            <div id="game" class="row d-flex justify-content-center">
+                <div style="width:30%">
+                    <div class="text-center" style="color: white;">
+                        <div style="height:50px">
+                            <h5 style="font-weight: bold;text-decoration: underline;">
+                                Music Guess!
+                            </h5>
+                        </div>
+
+                        <div style="height:50px">
+                            <span id="timer" style="width:100px;padding:10px;border: 1px solid black;">
+                                Timer: -
+                            </span>
+                        </div>
+
+                        <div style="height:35px">
+                            <span id="urutan">
+                                Question: 1
+                            </span>
+                        </div>
+
+                        <div style="height:35px">
+                            <span id="score">
+                                Score: 0
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div style="width:70%;" class="text-center">
+                    <div>
+                        <div style="margin-top: 20px;margin-bottom:10px;height:130px">
+                            <img src="https://i.gifer.com/OSOD.gif" style="width: auto;height: 120px;">
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center" style="width: 100%;padding-top:5px">
+                        
+                        <div class="text-center" style="width: 45%;padding-top:25px;font-size:12px; ">
+                            <button id="btnA" onclick="answer(0)" class="btn btn-primary btn-choice">-</button>
+                        </div>
+                        <div class="text-center" style="width: 45%;padding-top:25px;font-size:12px; ">
+                            <button id="btnB" onclick="answer(1)" class="btn btn-primary btn-choice">-</button>
+                        </div>
+                        <div class="text-center" style="width: 45%;padding-top:25px;font-size:12px; ">
+                            <button id="btnC" onclick="answer(2)" class="btn btn-primary btn-choice">-</button>
+                        </div>
+                        <div class="text-center" style="width: 45%;padding-top:25px;font-size:12px; ">
+                            <button id="btnD" onclick="answer(3)" class="btn btn-primary btn-choice">-</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div id="end" class="row d-flex justify-content-center d-none" style="width: 100%;color:white;">
+                <div style="margin-top: 30px;margin-bottom:10px;height:130px; width: 100%;text-align: center;">
+                    <h3 style=" font-weight: bold;">
+                        Game Selesai!
+                    </h3>
+                    <h5 style=" font-weight: bold;margin-top: 20px;margin-bottom: 20px;">
+                        Score Anda: <span id="scoreEnd">0</span>
+                    </h5>
+                    <button onclick="window.location.reload()" class="btn btn-success" style="color: white; font-weight:bold;">
+                        <i class="fa fa-undo"></i> Play Again
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        -->
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script>
+            var id = '<%= data[0].id %>'
+            var song = '<%= data[0].name %>'
+            var choiceA = '<%= data[0].choice_a %>'
+            var choiceB = '<%= data[0].choice_b %>'
+            var choiceC = '<%= data[0].choice_c %>'
+            var choiceD = '<%= data[0].choice_d %>'
+        </script>
+        <script src="/js/scripts.js" type="text/javascript"></script>
+    </body>
+</html>
